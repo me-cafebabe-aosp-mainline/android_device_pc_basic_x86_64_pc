@@ -6,12 +6,6 @@
 DEVICE_PATH := device/pc/basic_x86_64_pc
 
 # Inherit from mainline/common
-TARGET_HAS_BATTERY := false
-TARGET_HAS_VIBRATOR := false
-TARGET_SUPPORTS_SUSPEND := false
-TARGET_SUPPORTS_USB_ACCESSORY_MODE := false
-TARGET_USES_FRAMEBUFFER_DISPLAY := true
-include device/mainline/common/optional/options.mk
 $(call inherit-product, device/mainline/common/mainline_common.mk)
 
 # Bootanimation
@@ -20,6 +14,15 @@ TARGET_SCREEN_HEIGHT := 300
 
 # Dalvik heap
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+
+# Disable
+TARGET_HAS_BATTERY := false
+TARGET_HAS_VIBRATOR := false
+TARGET_SUPPORTS_SUSPEND := false
+TARGET_SUPPORTS_USB_ACCESSORY_MODE := false
+
+# Display
+TARGET_USES_FRAMEBUFFER_DISPLAY := true
 
 # Init
 PRODUCT_PACKAGES += \
