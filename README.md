@@ -12,6 +12,9 @@ please visit the [mainline/generic](https://github.com/LineageOS/android_device_
 #
 ```
 
+Using this as a starting point for your own device? See
+`device/mainline/common/docs/README.md`.
+
 # Steps to boot
 
 (The example environment used in below is a x86_64 PC running Debian with GRUB boot manager, and the hard drive is connected to SATA bus)
